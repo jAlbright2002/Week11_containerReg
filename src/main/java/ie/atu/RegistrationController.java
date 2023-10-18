@@ -20,12 +20,9 @@ public class RegistrationController {
     }
 
     @PostMapping("/confirm")
-    public Map<String, String> registerUser (@RequestBody UserDetails userDetails) {
-
+    public String registerUser (@RequestBody UserDetails userDetails) {
         String register = registrationServiceClient.moreDetails(userDetails);
-        Map<String, String> responseMessage = new HashMap<>();
-        responseMessage.put("message", register);
-        return responseMessage;
+        return register;
 
     }
 

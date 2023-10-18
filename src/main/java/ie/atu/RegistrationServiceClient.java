@@ -7,6 +7,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 @FeignClient(name="registration-service", url="http://localhost:8083")
 public interface RegistrationServiceClient {
-    @PostMapping("/registration")
+    @PostMapping("/register")
     String moreDetails(@RequestBody UserDetails userDetails);
 }
